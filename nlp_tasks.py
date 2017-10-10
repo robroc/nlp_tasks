@@ -24,7 +24,7 @@ def get_wordnet_pos(treebank_tag):
 
 def tokenize(text):
     """Takes raw text, tokenizes it, removes stopwords 
-    and words that are one-character long (like 'a' and punctuation.
+    and words that are one-character long (like 'a' and punctuation).
     Returns a list of tokens.
     """
     
@@ -45,7 +45,7 @@ def lemmatize(tagged_words):
     """Lemmatizes words. That is, it normalizes words to their most
     basic form. For example, 'is', 'am' and 'are' are merged into 'be'.
     
-    Returns a list of lemmarized tokens.
+    Returns a list of lemmatized tokens.
     
     Lemmatization is confined to parts of speech. Verb variations are lemmatized
     to the root verb, and same with nouns.
