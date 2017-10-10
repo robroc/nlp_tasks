@@ -7,7 +7,7 @@ engstopwords = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
 def get_wordnet_pos(treebank_tag):
-    """Utility function to convert post_tag part-of-speech tags 
+    """Utility function to convert pos_tag part-of-speech tags 
     to WordNet tags for use with lemmatizer. 
     """
     
