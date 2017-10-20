@@ -2,6 +2,8 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.corpus import wordnet
 from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import sent_tokenize
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 engstopwords = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
@@ -72,3 +74,23 @@ def get_distfreq(tokens, top_n):
     fdist = nltk.FreqDist(tokens)
     return fdist.most_common(top_n)
 
+def sentiment_analysis(text)
+    """Prints out the VADER sentiment scores for each sentence in the text."""
+    
+    sentences = sent_tokenize(text)
+    pos = []
+    neg = []
+    neu = []
+    for sentence in sentences:
+        ss = sia.polarity_scores(sentence)
+        if ss['neu'] > 0.5:
+            neu.append(sentence)
+        elif: ss['pos'] > 0.5:
+            pos.append(sentence)
+        else:
+            neg.append(sentence)
+        
+    print("Positive: {}, Negative: {}, Neutral: {} ".format(str(len(pos)), str(len(neg)), str(len(neu))))
+        #for k in ss:
+        #    print('{0}: {1}, '.format(k, ss[k]))
+        #    print('\n')

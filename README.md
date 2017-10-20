@@ -10,6 +10,8 @@ The functions do the following:
 * lemmatizing rods to their most basic form (e.g. "are", "is", "am" are merged into "be")
 * finding the most common words in a text
 
+The fuctions are on their own in `nlp_taks.py` and in a Jupyter notebook showing their usage with a sample text file.
+
 These scrips require the nltk lirary and the addition of corpus elements, like stopwords and wordnet.
 
 To install nltk:
